@@ -149,6 +149,7 @@ public class SocketServer extends WebSocketServer {
             case "play":
                 try {
                     Player player = contextMap.get(webSocket).getPlayer(json.getString("guildId"));
+                    //TODO Solve the problem of calling niconico becomes null.
                     AudioTrack track = Util.toAudioTrack(json.getString("track"));
                     if (json.has("startTime")) {
                         track.setPosition(json.getLong("startTime"));

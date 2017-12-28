@@ -9,6 +9,7 @@ lavalink:
       host: 0.0.0.0
     sources:
       youtube: true
+      niconico: false
       bandcamp: true
       soundcloud: true
       twitch: true
@@ -18,3 +19,6 @@ lavalink:
       local: false
     sentryDsn: ""
     bufferDurationMs: 400
+    # Required only when niconico is enabled.
+    niconicoid: "Your niconicoid"
+    niconicopass: "Your niconico password"

@@ -69,9 +69,30 @@ public class Config {
         this.bufferDurationMs = bufferDurationMs;
     }
 
+    private String niconicoid;
+
+    public String getNiconicoid() {
+        return niconicoid;
+    }
+
+    public void setNiconicoid(String niconicoid) {
+        this.niconicoid = niconicoid;
+    }
+
+    private String niconicpass;
+
+    public String getNiconicpass() {
+        return niconicpass;
+    }
+
+    public void setNiconicpass(String niconicpass) {
+        this.niconicpass = niconicpass;
+    }
+
     public static class Sources {
 
         private boolean youtube = true;
+        private boolean niconico = false;
         private boolean bandcamp = true;
         private boolean soundcloud = true;
         private boolean twitch = true;
@@ -86,6 +107,14 @@ public class Config {
 
         public void setYoutube(boolean youtube) {
             this.youtube = youtube;
+        }
+
+        public boolean isNiconico() {
+            return niconico;
+        }
+
+        public void setNiconico(boolean niconico) {
+            this.niconico = niconico;
         }
 
         public boolean isBandcamp() {
