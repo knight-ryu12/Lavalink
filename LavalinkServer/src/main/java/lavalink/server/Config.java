@@ -79,20 +79,20 @@ public class Config {
         this.niconicoid = niconicoid;
     }
 
-    private String niconicpass;
+    private String niconicopass;
 
-    public String getNiconicpass() {
-        return niconicpass;
+    public String getNiconicopass() {
+        return niconicopass;
     }
 
-    public void setNiconicpass(String niconicpass) {
-        this.niconicpass = niconicpass;
+    public void setNiconicopass(String niconicopass) {
+        this.niconicopass = niconicopass;
     }
 
     public static class Sources {
 
         private boolean youtube = true;
-        private boolean niconico = false;
+        private boolean niconico = true;
         private boolean bandcamp = true;
         private boolean soundcloud = true;
         private boolean twitch = true;

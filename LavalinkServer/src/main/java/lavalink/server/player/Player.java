@@ -62,7 +62,9 @@ public class Player extends AudioEventAdapter implements AudioSendHandler {
 
         Config.Sources sources = Launcher.config.getSources();
         if (sources.isYoutube()) PLAYER_MANAGER.registerSourceManager(new YoutubeAudioSourceManager());
-        if (sources.isNiconico()) PLAYER_MANAGER.registerSourceManager(new NicoAudioSourceManager(Launcher.config.getNiconicoid(), Launcher.config.getNiconicpass()));
+        if (sources.isNiconico()) {PLAYER_MANAGER.registerSourceManager(new NicoAudioSourceManager(Launcher.config.getNiconicoid(), Launcher.config.getNiconicopass()));
+            log.info(Launcher.config.getNiconicoid()+":"+Launcher.config.getNiconicopass());
+        }
         if (sources.isBandcamp()) PLAYER_MANAGER.registerSourceManager(new BandcampAudioSourceManager());
         if (sources.isSoundcloud()) PLAYER_MANAGER.registerSourceManager(new SoundCloudAudioSourceManager());
         if (sources.isTwitch()) PLAYER_MANAGER.registerSourceManager(new TwitchStreamAudioSourceManager());
